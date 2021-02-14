@@ -1,0 +1,117 @@
+.navbar {
+  height: 8.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__logo-wrap {
+    align-self: center;
+    display: flex;
+    // justify-items: flex-start;
+    align-items: center;
+    height: 30px;
+    width: 128px;
+    margin-left: 1.5rem;
+  }
+
+  &__logo-link {
+    height: 50px;
+    max-width: 150px;
+    width: 100%;
+    display: inline-block;
+  }
+
+  &__logo {
+    height: 100%;
+    width: 100%;
+    background-image: url('../../img/homey-logo-white.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__nav-area {
+    color: inherit;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &__list {
+    color: inherit;
+    align-self: stretch;
+    display: flex;
+    list-style: none;
+    align-items: stretch;
+    
+
+    & > * > * {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    padding: 0 1.5rem;
+    position: relative;
+    
+    &:nth-of-type(8) {
+      padding: 0;
+      align-self: center;
+    }
+
+    &:not(:nth-of-type(8))::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 5px;
+      width: 100%;
+      background-color: $color-primary;
+      transform: scaleX(0);
+      transition: transform .2s, width .4s  cubic-bezier(1,0,0,1) .2s;
+      
+    }
+
+    &:not(:nth-of-type(8)):active::before {
+      background-color: $color-primary;
+    }
+
+     &:not(:nth-of-type(8)):hover::before {
+       transform: scaleX(1);
+       width: 100%;
+     }
+
+
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: normal;
+    color: inherit;
+  }
+
+  &__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: white;
+    margin-left: .5rem;
+  }
+
+  &__icon2 {
+    height: 1.25rem;
+    width: 1.25rem;
+    fill: gainsboro;
+  }
+
+  &__btn-wrap {
+    // align-self: center;
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+  }
+  
+}
